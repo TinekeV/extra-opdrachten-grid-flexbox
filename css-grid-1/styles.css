@@ -1,0 +1,43 @@
+
+.container {
+    background-color: hsl(212, 36%, 90%);
+    display: grid;
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 400px 150px;
+    grid-template-areas:
+        "header header navigation"
+        "aside main main"
+        "footer footer footer";
+}
+
+.item {
+    background-color: hsl(212, 43%, 65%);
+    color: hsl(212, 36%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#header {
+    grid-area: header;
+}
+
+#navigation {
+    grid-area: navigation;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+#main {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: footer;
+}

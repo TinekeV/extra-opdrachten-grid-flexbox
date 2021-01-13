@@ -3,13 +3,16 @@ body {
     background-color: hsl(291, 48%, 89%);
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
+
 
 .container {
     width: 1200px;
     background-color: hsl(304, 51%, 94%);
     display: flex;
+    /*OP MOBIEL*/
+    flex-wrap: wrap;
 }
 
 .item {
@@ -20,7 +23,26 @@ body {
 }
 
 #aside {
-    flex-basis: 300px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    /*OP MOBIEL*/
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+/*OP DESKTOP*/
+
+@media screen and (min-width: 576px) {
+    .container {
+        flex-wrap: nowrap;
+    }
+    #aside {
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    #main {
+        flex-basis: 900px;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }
